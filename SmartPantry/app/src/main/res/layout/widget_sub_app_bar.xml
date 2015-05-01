@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_sub_bar_background_color"
+    android:clickable="true"
+    android:padding="@dimen/app_sub_bar_padding">
+
+    <!--TODO change margin to desired spacing, currently 50dp-->
+    <LinearLayout
+        android:id="@+id/filter_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/app_sub_bar_filter_margin"
+        android:orientation="horizontal">
+
+        <!--TODO replace with filter array-->
+        <Spinner
+            android:id="@+id/filter_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:popupBackground="@drawable/location_filter"
+            style="@android:style/Theme.Material.Light"/>
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/search_inventory_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:iconifiedByDefault="true" />
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_location_label"
+    style="@style/ListItemSpinnerStyle"
+    android:gravity="center"
+    android:paddingLeft="@dimen/spinner_horizontal_padding"
+    android:paddingRight="@dimen/spinner_horizontal_padding"
+    android:paddingTop="@dimen/spinner_vertical_padding"
+    android:paddingBottom="@dimen/spinner_vertical_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-light"
+    android:textStyle="bold"
+    android:textSize="@dimen/edit_item_font_size" />

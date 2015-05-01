@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quantity_selection_container"
+    android:paddingBottom="@dimen/quantity_widget_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/quantity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/quantity_label_margin_top"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/label_item_qty"
+        android:textSize="@dimen/edit_item_font_size"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:weightSum="4">
+
+        <com.macadamian.smartpantry.widgets.ImageToggleButton
+            android:id="@+id/quantity_none_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quantity_button_height"
+            android:layout_weight="1"
+            custom:drawable_on="@drawable/ic_quantity_none_full"
+            custom:drawable_off="@drawable/ic_quantity_none"/>
+
+        <com.macadamian.smartpantry.widgets.ImageToggleButton
+            android:id="@+id/quantity_some_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quantity_button_height"
+            android:layout_weight="1"
+            custom:drawable_on="@drawable/ic_quantity_some_full"
+            custom:drawable_off="@drawable/ic_quantity_some" />
+
+        <com.macadamian.smartpantry.widgets.ImageToggleButton
+            android:id="@+id/quantity_enough_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quantity_button_height"
+            android:layout_weight="1"
+            custom:drawable_on="@drawable/ic_quantity_enough_full"
+            custom:drawable_off="@drawable/ic_quantity_enough" />
+
+        <com.macadamian.smartpantry.widgets.ImageToggleButton
+            android:id="@+id/quantity_lots_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quantity_button_height"
+            android:layout_weight="1"
+            custom:drawable_on="@drawable/ic_quantity_lots_full"
+            custom:drawable_off="@drawable/ic_quantity_lots" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="None"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Some"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Enough"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Lots"/>
+    </LinearLayout>
+</LinearLayout>

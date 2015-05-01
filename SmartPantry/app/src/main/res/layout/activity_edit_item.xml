@@ -1,0 +1,284 @@
+<RelativeLayout
+    android:id="@+id/edit_item_root_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/item_btn_container">
+
+        <RelativeLayout
+            android:id="@+id/scrollview_child"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/name_barcode_set_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:contentPadding="@dimen/activity_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.macadamian.smartpantry.widgets.ImageToggleButton
+                            android:id="@+id/barcode_btn"
+                            android:layout_width="@dimen/edit_item_barcode_width"
+                            android:layout_height="@dimen/edit_item_barcode_height"
+                            android:background="@drawable/ripple_white_to_blue_button"
+                            app:drawable_on="@drawable/btn_barcode_added"
+                            app:drawable_off="@drawable/btn_add_barcode"
+                            app:drawable_checked="false"/>
+
+                            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                                android:id="@+id/item_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:nextFocusLeft = "@id/name_barcode_set_container"
+                                android:nextFocusRight = "@id/name_barcode_set_container"
+                                android:hint="@string/edit_text_item_name_hint"
+                                app:floatingLabel="highlight"
+                                app:primaryColor="@android:color/darker_gray"
+                                app:maxCharacters="50"
+                                app:baseColor="@color/black"
+                                app:singleLineEllipsis="true"
+                                android:textSize="28sp"
+                                android:fontFamily="sans-serif-regular"
+                                android:textStyle="bold"
+                                style="@style/AutoCompleteTextViewStyle" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/field_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:gravity="center_horizontal">
+
+                    <com.macadamian.smartpantry.widgets.QuantityWidget
+                        android:id="@+id/quantity_widget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/field_expiration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/expiration_content_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/expiration_label"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/field_label_height"
+                        android:layout_weight="0.30"
+                        android:layout_margin="@dimen/edit_field_margins"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_item_exp"
+                                android:textSize="@dimen/edit_item_font_size"
+                                android:fontFamily="sans-serif-light"
+                                android:textStyle="italic"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expiration_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70"
+                        android:layout_margin="@dimen/edit_field_margins"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/expiration_picked_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_date_set"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/edit_item_font_size"/>
+
+                        <Spinner
+                            android:id="@+id/expiration_day_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:entries="@array/day_left_array"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:spinnerMode="dialog"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edit_divider_height"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:background="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/field"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_content_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/field_label"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/field_label_height"
+                        android:layout_weight="0.30"
+                        android:layout_margin="@dimen/edit_field_margins"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_location_property_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_item_loc"
+                            android:textSize="@dimen/edit_item_font_size"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="italic"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/field_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70"
+                        android:layout_margin="@dimen/edit_field_margins"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spinner_location_property_values"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:spinnerMode="dialog"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edit_divider_height"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:background="@android:color/darker_gray"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/field_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_content_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/category_label"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/field_label_height"
+                        android:layout_weight="0.30"
+                        android:layout_margin="@dimen/edit_field_margins"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_category_property_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_item_category"
+                            android:textSize="@dimen/edit_item_font_size"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="italic"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/category_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70"
+                        android:layout_margin="@dimen/edit_field_margins"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spinner_category_property_values"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:spinnerMode="dialog"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/item_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/submit_item_btn"
+            style="@style/EditButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/label_button_submit"/>
+
+        <Button
+            android:id="@+id/discard_item_btn"
+            style="@style/EditButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/label_button_discard"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

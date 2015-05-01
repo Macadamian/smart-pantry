@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ListPreference requires BOTH an entries array and an entryValues array.-->
+
+    <string-array name="listArray">
+        <item>Weekly</item>
+        <item>Daily</item>
+    </string-array>
+
+    <string-array name="listValues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+</resources>

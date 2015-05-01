@@ -1,0 +1,13 @@
+# Gradle files
+.gradle/
+build/
+bin/
+
+# AndroidStudio files
+.idea/
+*.iml
+
+local.properties
+.DS_Store
+
+*.orig

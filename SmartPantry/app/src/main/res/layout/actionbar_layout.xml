@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:id="@+id/actionbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/actionbar_btn_container"
+        android:gravity="center_vertical|start"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="28sp"
+        android:paddingStart="@dimen/actionbar_title_padding"/>
+
+    <RelativeLayout
+        android:id="@+id/actionbar_btn_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/icon_appbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/shopping_list_icon"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            style="@style/ActionBarSplatStyle"
+            android:id="@+id/actionbar_splat"
+            android:layout_width="@dimen/actionbar_splat_size"
+            android:layout_height="@dimen/actionbar_splat_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    android:descendantFocusability="blocksDescendants">
+
+    <com.macadamian.smartpantry.widgets.UndoActionWidget
+        android:id="@+id/undo_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/card_root_cont"
+        android:layout_alignTop="@+id/card_root_cont" />
+
+    <RelativeLayout
+        android:id="@+id/card_root_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/adapter_padding">
+
+        <com.macadamian.smartpantry.widgets.ExpirationWidget
+            android:id="@+id/expiration_widget"
+            android:layout_width="@dimen/expiry_item_width"
+            android:layout_height="@dimen/quantity_button_height"
+            android:layout_marginRight="@dimen/icon_inner_margin"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_toRightOf="@id/expiration_widget"
+            android:layout_centerVertical="true"
+            android:id="@+id/quantity_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/adapter_layout_bottom_margin">
+
+            <com.gc.materialdesign.views.ButtonFloat
+                android:id="@+id/item_quantity_txt"
+                android:layout_width="@dimen/quantity_button_height"
+                android:layout_height="@dimen/quantity_button_height"
+                android:scaleType="fitXY"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/icon_inner_margin"
+                android:cropToPadding="true"/>
+
+
+            <TextView
+                android:id="@+id/item_name_txt"
+                style="@style/ItemTitle"
+                android:layout_marginRight="@dimen/margin_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/item_quantity_txt"
+                android:ellipsize="end"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/location_expiration_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/expiration_widget"
+            android:layout_below="@id/quantity_name_layout">
+
+
+            <TextView
+                android:id="@+id/item_location_txt"
+                style="@style/ItemBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:maxEms="15"
+                android:ellipsize="end"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--This is a place holder for the actual quantity selector-->
+    <LinearLayout
+        android:id="@+id/inline_quantity_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_root_cont"
+        android:background="@color/quick_quantity_color"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/qty_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_recycler_divider_height"
+            android:background="@color/item_divider_color"/>
+
+        <com.macadamian.smartpantry.widgets.QuantityWidget
+            android:id="@+id/quantity_widget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/recycler_divider"
+        android:layout_below="@id/inline_quantity_cont"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_recycler_divider_height"
+        android:background="@color/item_divider_color"/>
+
+</RelativeLayout>
