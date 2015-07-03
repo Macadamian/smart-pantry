@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main content layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipToPadding="false">
+
+        <com.macadamian.smartpantry.widgets.SmartRecyclerView
+            android:id="@+id/pantry_list_view"
+            android:layout_width="match_parent"
+            android:background="@color/recyclerview_background_color"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:drawSelectorOnTop="true"
+            android:fastScrollEnabled="true"
+            android:overScrollMode="never" />
+
+        <com.macadamian.smartpantry.widgets.EmptyViewWidget
+            android:id="@+id/pantry_list_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <com.macadamian.smartpantry.widgets.SubAppBarWidget
+            android:id="@+id/sub_app_bar_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:elevation="@dimen/app_sub_bar_elevation"/>
+
+        <LinearLayout
+            android:id="@+id/input_btn_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/add_item_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/add_item_button_margin"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_white_48dp"
+                android:elevation="10dp"
+                fab:fab_colorNormal="@color/add_item_button_background"
+                fab:fab_colorPressed="@color/add_item_button_background"
+                fab:fab_colorRipple="@color/grey" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Navigation Drawer layout -->
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="com.macadamian.smartpantry.ui.fragments.NavigationDrawerFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+
+</android.support.v4.widget.DrawerLayout>

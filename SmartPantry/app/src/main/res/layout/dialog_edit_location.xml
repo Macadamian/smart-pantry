@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/edit_location_padding"
+    android:paddingRight="@dimen/edit_location_padding">
+
+
+    <TextView
+        style="@style/EditLocationDialogLabelStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        style="@style/EditLocationDialogInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_location_input"
+        android:textCursorDrawable="@drawable/active_item_drawable"
+        app:primaryColor="@android:color/darker_gray"
+        app:floatingLabel="highlight"
+        app:maxCharacters="50"
+        app:baseColor="@color/black"
+        app:singleLineEllipsis="true" />
+
+</LinearLayout>

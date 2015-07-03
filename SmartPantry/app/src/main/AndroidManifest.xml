@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.macadamian.smartpantry" >
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".ui.SmartPantry">
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.macadamian.smartpantry.ui.activities.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.activities.ManageLocationsActivity"
+                  android:label="@string/activity_label_manage_locations">
+
+            <intent-filter>
+                <action android:name=".ui.activities.ManageLocationsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.activities.AboutActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/activity_label_about"/>
+
+        <activity android:name=".ui.activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/activity_label_settings"/>
+
+        <activity android:name=".ui.activities.InsertItemActivity"
+                  android:label="@string/activity_label_insert_item"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme_SlidableTransparent"/>
+
+        <activity android:name=".ui.activities.EditItemActivity"
+                  android:label="@string/activity_label_edit_item"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme_SlidableTransparent"
+                  android:configChanges="orientation|screenSize"
+                  android:windowSoftInputMode="stateHidden"/>
+
+        <provider
+            android:authorities="com.macadamian.smartpantry.content.MyContentProvider"
+            android:name="com.macadamian.smartpantry.content.MyContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name="com.macadamian.smartpantry.ui.receivers.AlarmReceiver" />
+
+        <receiver android:name="com.macadamian.smartpantry.ui.receivers.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+
+        <!-- Google play services -->
+        <meta-data android:name="com.google.android.gms.version"
+                   android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_category_my_pantry">
+
+        <Preference
+            android:key="pref_key_location_edit"
+            android:summary="@string/pref_location_edit_summary"
+            android:title="@string/pref_location_edit_title" >
+
+            <intent android:action=".ui.activities.ManageLocationsActivity"/>
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_category_notifications" >
+
+        <CheckBoxPreference
+            android:key="pref_key_notification_toggle"
+            android:title="@string/pref_notification_toggle_title"
+            android:summary="@string/pref_notification_toggle_summary"
+            android:defaultValue="true"/>
+
+        <ListPreference
+            android:title="@string/pref_notification_frequency_toggle_summary"
+            android:key="listPref"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

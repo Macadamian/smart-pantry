@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemPropertyWidget">
+        <attr name="property_name" format="string"/>
+        <attr name="spinner_array" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemQuantityWidget">
+        <attr name="quantity_names_array" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageToggleButton">
+        <attr name="drawable_on" format="reference" />
+        <attr name="drawable_off" format="reference"/>
+        <attr name="drawable_checked" format="boolean" />
+    </declare-styleable>
+</resources>

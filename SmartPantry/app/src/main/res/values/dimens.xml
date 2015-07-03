@@ -1,0 +1,98 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_padding">16dp</dimen>
+
+    <!-- Inventory adapter padding and margins -->
+    <dimen name="adapter_layout_bottom_margin">0.5dp</dimen>
+
+    <!-- Inventory adapter shape info -->
+    <dimen name="shape_pantry_item_stroke_width">1dp</dimen>
+    <dimen name="shape_pantry_item_padding">20dp</dimen>
+    <dimen name="shape_pantry_item_corner_radius">20dp</dimen>
+
+    <dimen name="add_item_button_margin">16dp</dimen>
+
+    <dimen name="margin_edit_item_pieces">10dp</dimen>
+
+
+    <!-- Main Activity dimens -->
+    <dimen name="undo_btn_height">45dp</dimen>
+    <dimen name="footer_height">70dp</dimen>
+
+    <!-- Edit location dimens -->
+    <dimen name="edit_location_padding">10dp</dimen>
+    <dimen name="edit_location_item_padding">20dp</dimen>
+    <dimen name="edit_location_dialog_label_padding">25dp</dimen>
+    <dimen name="edit_location_dialog_label_text_size">25sp</dimen>
+    <dimen name="edit_location_dialog_input_padding">25dp</dimen>
+    <dimen name="location_text_size">24sp</dimen>
+    <dimen name="location_name_margin_left">5dp</dimen>
+
+    <!--inventory item adapter-->
+    <dimen name="adapter_margin">16dp</dimen>
+    <dimen name="adapter_padding">8dp</dimen>
+    <dimen name="icon_inner_margin">10dp</dimen>
+    <dimen name="group_title_padding">10dp</dimen>
+    <dimen name="item_recycler_divider_height">0.5dp</dimen>
+
+    <dimen name="card_elevation">1px</dimen>
+    <dimen name="card_margin">1px</dimen>
+
+    <!-- Navigation drawer dimens -->
+    <dimen name="navigation_item_padding">10dp</dimen>
+    <dimen name="navigation_item_drawable_padding">5dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="navigation_drawer_divider_height">0dp</dimen>
+    <dimen name="navigation_drawer_separator_height">1dp</dimen>
+    <dimen name="navigation_drawer_separator_margin">5dp</dimen>
+    <dimen name="navigation_drawer_bottom_items_padding">5dp</dimen>
+    <dimen name="navigation_drawer_bottom_items_text_size">15sp</dimen>
+    <dimen name="navigation_drawer_text_size">24sp</dimen>
+
+    <!--App Sub Bar-->
+    <dimen name="app_sub_bar_padding">5dp</dimen>
+    <dimen name="app_sub_bar_filter_margin">50dp</dimen>
+    <dimen name="app_sub_bar_elevation">5dp</dimen>
+
+    <!--edit item-->
+    <dimen name="edit_item_font_size">20sp</dimen>
+    <dimen name="expiration_content_height">100dp</dimen>
+    <dimen name="field_label_height">25dp</dimen>
+    <dimen name="edit_field_margins">10dp</dimen>
+    <dimen name="field_content_spinner_width">200dp</dimen>
+    <dimen name="field_content_height">70dp</dimen>
+    <dimen name="edit_divider_width">200dp</dimen>
+    <dimen name="edit_divider_height">1dp</dimen>
+
+    <!--About Page-->
+    <dimen name="about_top_text_size">20sp</dimen>
+    <dimen name="about_text_size">15sp</dimen>
+    <dimen name="about_url_margin">5dp</dimen>
+    <dimen name="about_view_button_height">28dp</dimen>
+    <dimen name="about_view_button_width">100dp</dimen>
+
+    <!--Quantity Widget-->
+    <dimen name="quantity_button_height">40dp</dimen>
+    <dimen name="quantity_label_margin_top">8dp</dimen>
+    <dimen name="edit_item_barcode_width">60dp</dimen>
+    <dimen name="edit_item_barcode_height">40dp</dimen>
+    <dimen name="expiry_item_width">36dp</dimen>
+
+    <!-- Empty View Widget dimens -->
+    <dimen name="empty_view_widget_label_text_size">21sp</dimen>
+    <dimen name="empty_view_widget_btn_margin">25dp</dimen>
+
+    <!-- ActionBar dimens -->
+    <dimen name="actionbar_splat_padding">2dp</dimen>
+    <dimen name="actionbar_splat_size">16dp</dimen>
+    <dimen name="actionbar_splat_text_size">8sp</dimen>
+    <dimen name="actionbar_title_padding">10dp</dimen>
+
+    <dimen name="spinner_horizontal_padding">10sp</dimen>
+    <dimen name="spinner_vertical_padding">5sp</dimen>
+    <dimen name="margin_name_text">15sp</dimen>
+    <dimen name="quantity_widget_padding">10dp</dimen>
+
+</resources>

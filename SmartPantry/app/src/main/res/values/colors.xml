@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Default Colors-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#b5b3b2</color>
+
+    <!--Overall Colors-->
+    <color name="primary_dark">#1c6aac</color>
+    <color name="primary">#ff33cfe8</color>
+    <color name="accent">#ff1e93e5</color>
+    <color name="lightaccent">#ffa2d9db</color>
+
+    <!--Navigation Button Colors-->
+    <color name="add_item_button_background">#ffff7474</color>
+    <color name="shape_item_gradient_start_color">#CCCCCC</color>
+    <color name="shape_item_gradient_end_color">#999999</color>
+
+    <!--Inventory List Colors-->
+    <color name="item_text_color">#1b1b1b</color>
+    <color name="item_title_color">#444444</color>
+    <color name="item_not_expired_color">#FFFFFF</color>
+    <color name="item_expired_color">#FFFFFF</color>
+    <color name="item_selected_color">#C8E6C9</color>
+    <color name="item_inactive_color">#FFFFFF</color>
+    <color name="item_divider_color">#CFD8DC</color>
+    <color name="recyclerview_background_color">#FFDEDEDE</color>
+    <color name="quantity_widget_gray">#FFEBEBEB</color>
+
+    <!--Navigation Drawer Colors-->
+    <color name="navigation_drawer_background_color">#bdf3f5</color>
+
+    <!--Quick Quantity Edit Colors-->
+    <color name="quick_quantity_color">#FFFFFF</color>
+
+    <!--App Sub Bar Colors-->
+    <color name="app_sub_bar_background_color">#acf0f2</color>
+    <color name="qty_quick_background">#1E88E5</color>
+
+</resources>

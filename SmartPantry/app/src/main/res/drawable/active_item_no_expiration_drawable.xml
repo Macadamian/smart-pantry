@@ -1,0 +1,16 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- State selected -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/item_selected_color" />
+        </shape>
+    </item>
+
+    <!-- State normal -->
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/item_inactive_color" />
+        </shape>
+    </item>
+</selector>
