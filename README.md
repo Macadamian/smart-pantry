@@ -26,7 +26,7 @@ Installation
 ### Installation Instructions
 1. Clone the repo: `git clone https://github.com/Macadamian/smart-pantry.git`
 2. In Android Studio select "Open existing project" and select the `SmartPantry` folder.
-3. Plug in your device and click the run button to build the app
+3. Plug in your device, or emulate a compatible device using [Genymotion](https://www.genymotion.com/#!/download) and click the run button to build the app
 
 Project Structure
 =========
@@ -59,7 +59,7 @@ There are several testing classes (in progress) included in the project that cov
 
 Contributing
 =========
-We welcome any contributions to the repository, and will make an effort to review Pull Request's frequently.
+We welcome any contributions to the repository, and will make an effort to review Pull Requests frequently.
 
 All bugs are tracked using GitHub's issue tracker, and we request that all patches should address an issue from there. 
 
